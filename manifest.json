@@ -13,10 +13,12 @@
 
   "content_scripts": [
     {
-      "matches": [ "https://vk.com/feed", "http://vk.com/feed" ],
+      "matches": [ "https://vk.com/*", "http://vk.com/*" ],
       "js": [ "js/content.js" ]
     }
   ],
+
+  "web_accessible_resources" : ["/js/hide-stories-vk.js"],
 
   "permissions": [
     "activeTab"

@@ -1,3 +1,7 @@
-let storiesBlock = document.querySelector( "#stories_feed_wrap" );
+var s = document.createElement('script');
 
-storiesBlock.remove();
+s.src = chrome.extension.getURL('js/hide-stories-vk.js');
+s.onload = function() {
+    this.remove();
+};
+(document.head || document.documentElement).appendChild(s);

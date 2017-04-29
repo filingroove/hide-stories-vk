@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+
+  "name": "Hide Stories VK",
+  "description": "If only we could hide that annoying thing in smartphone apps too",
+  "version": "1.0",
+
+  "icons": { 
+    "24": "img/icon-assets/icon-24.png",
+    "48": "img/icon-assets/icon-48.png",
+    "128": "img/icon-assets/icon-128.png" 
+  },
+
+  "content_scripts": [
+    {
+      "matches": [ "https://vk.com/feed", "http://vk.com/feed" ],
+      "js": [ "js/content.js" ]
+    }
+  ],
+
+  "permissions": [
+    "activeTab"
+  ]
+}
